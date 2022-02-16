@@ -1,5 +1,3 @@
-__author__ = 'tk'
-
 import datetime
 import sys
 from time import sleep
@@ -9,6 +7,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.chrome.options import Options
+
 options = Options()
 options.add_argument("--headless")
 options.add_argument("window-size=1400,1500")
@@ -19,19 +18,10 @@ options.add_argument("enable-automation")
 options.add_argument("--disable-infobars")
 options.add_argument("--disable-dev-shm-usage")
 
-# This method solves the "DeprecateWarning" error that occurs in Selenium 4 and above.
-# 1. Comment out, or remove the previous method which was: driver = webdriver.Chrome('chromedriver.exe path')
-# 2. Add following code
-
 driver = webdriver.Chrome(options=options)
+
+# global variable to store user moodle system id
 user_system_id = ''
-
-
-# initialize chrome driver object
-# driver = webdriver.Chrome('./chromedriver.exe')  # relative path
-# initialize chrome driver object
-# driver = webdriver.Chrome(r'C:\Automation\PythonPRJ\moodle_app\chromedriver.exe')
-# right-click chromdriver.exe, copy Path > Absolute Path
 
 # Method to open web browser
 def setUp():
