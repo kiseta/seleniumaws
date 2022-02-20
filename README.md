@@ -79,6 +79,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 ```
 sudo yum update
+```
 #### install Pyhton 3 prerequisites
 ```
 sudo yum install gcc openssl-devel bzip2-devel libffi-devel
