@@ -1,5 +1,7 @@
 # AWS, Jenkins, Selenium, Python, Git Integration
 
+Open terminal connection to your AWS Linux, execute the following commands in Terminal (CMD/Git Bash)
+
 ## AWS Amazon Linux Temporary Lab instance
 ```
 see commands for a regular Amazon Ubuntu instance at:
@@ -104,4 +106,22 @@ virtualenv --version
 ```
 sudo yum install git
 git --version
+```
+
+---
+
+### Make Jenkins & Git integration (using Terminal or CMD)
+
+#### Generate ssh-key
+```
+ssh-keygen
+```
+
+#### Add Public key to the GitHub > Settings > Deploy Keys
+```
+/home/ec2-user/.ssh/id_rsa.pub
+```
+#### Add Privat key in Jenkins Project Config
+```
+/home/ec2-user/.ssh/id_rsa
 ```
