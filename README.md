@@ -127,13 +127,13 @@ cat /home/ec2-user/.ssh/id_rsa
 ```
 ---
 
-### General Moodle Selenium Script
+### Jenkins Moodle Selenium Script
 
 Setup a proper path, I call my virtualenv dir "venv", and I've got the virtualenv command installed in /usr/local/bin
 
-#### Jenkins Project, Git Branch: 
+#### Jenkins Project, Git Branch (*important!* */master by default): 
 ```
-** */main **
+*/main
 ```
 #### Jenkins Project, Shell Script: 
 
