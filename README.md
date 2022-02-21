@@ -1,10 +1,10 @@
 # AWS, Jenkins, Selenium, Python, Git Integration
 
-Open terminal connection to your AWS Linux, execute the following commands in Terminal (CMD/Git Bash)
+Open terminal connection to your AWS Linux2 instance, execute the following commands in command line inteface terminal (CMD/Git Bash)
 
-## AWS Amazon Linux Temporary Lab instance
+## AWS EC2 Linux2 instance (AWS Academy Temporary Lab Instance)
 ```
-see commands for a regular Amazon Ubuntu instance at:
+see commands for a AWS EC2 Ubuntu instance at:
 https://github.com/coddyca/seleniumaws/blob/main/README.md
 ```
 ### Initial EC2 Installation on AWS
