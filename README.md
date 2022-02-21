@@ -117,11 +117,36 @@ git --version
 ssh-keygen
 ```
 
-#### Add Public key to the GitHub > Settings > Deploy Keys
+#### Add Public key to the GitHub > Settings > Deploy Keys, to generate the key:
 ```
-/home/ec2-user/.ssh/id_rsa.pub
+cat /home/ec2-user/.ssh/id_rsa.pub
 ```
-#### Add Privat key in Jenkins Project Config
+#### Add Privat key in Jenkins Project Config, to generate the key:
 ```
-/home/ec2-user/.ssh/id_rsa
+cat /home/ec2-user/.ssh/id_rsa
+```
+---
+
+### General Moodle Selenium Script
+
+Setup a proper path, I call my virtualenv dir "venv", and I've got the virtualenv command installed in /usr/local/bin
+
+#### Jenkins Project, Git Branch: 
+```
+** */main **
+```
+#### Jenkins Project, Shell Script: 
+
+```
+PATH=${PATH}:/usr/local/bin
+if [ ! -d "venv" ]; then
+        virtualenv venv
+fi
+. venv/bin/activate
+pip3 install faker
+pip3 install selenium
+pip3 install pytest
+cd /var/lib/jenkins/workspace/PythonSeleniumMoodle/
+python3 -m unittest discover --pattern=moodle_tests.py
+deactivate
 ```
