@@ -129,7 +129,7 @@ cat /home/ec2-user/.ssh/id_rsa
 
 ### Jenkins Moodle Selenium Script
 
-#### Jenkins Project, Git Branch name (=important!= */master by default): 
+#### Jenkins Project, Git Branch name (=>important<= */master by default): 
 ```
 */main
 ```
