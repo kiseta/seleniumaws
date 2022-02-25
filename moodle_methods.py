@@ -1,9 +1,9 @@
-import datetime
 import sys
-from time import sleep
 import pytest
-import moodle_locators as locators
+import datetime
+from time import sleep
 from selenium import webdriver
+import moodle_locators as locators
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.chrome.options import Options
