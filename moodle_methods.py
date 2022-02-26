@@ -1,5 +1,5 @@
 import sys
-import pytest
+#import pytest
 import datetime
 from time import sleep
 from selenium import webdriver
@@ -80,7 +80,7 @@ def log_out():
     # breakpoint()
 
 
-#
+# Method to create new user
 def create_new_user():
     # Navigate to Site Administration > Users > Add New User
     driver.find_element(By.XPATH, '//span[contains(.,"Site administration")]').click()
@@ -196,6 +196,7 @@ def create_new_user():
     print(f'--- New user "{locators.new_username}" is added.')
 
 
+# Method to search the user
 def search_user():
     # Check we are on the User's Main Page
     if driver.current_url == locators.moodle_users_main_page and driver.title == locators.moodle_users_main_page_title:
@@ -221,6 +222,7 @@ def search_user():
             # breakpoint()
 
 
+# Method to validate new user can login
 def check_new_user_can_login():
     if driver.current_url == locators.moodle_dashboard_url:
         if driver.find_element(By.XPATH, f'//span[contains(., "{locators.full_name}")]').is_displayed():
@@ -228,6 +230,7 @@ def check_new_user_can_login():
             logger('created')
 
 
+# Method to delete the user
 def delete_user():
     # Navigate to Site Administration > Users > Browse list of users
     driver.find_element(By.XPATH, '//span[contains(.,"Site administration")]').click()
