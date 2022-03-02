@@ -19,9 +19,6 @@ options.add_argument("--disable-dev-shm-usage")
 
 driver = webdriver.Chrome(options=options)
 
-# global variable to store user moodle system id
-locators.sid = ''
-
 # Method to open web browser
 def setUp():
     print(f'Launch {locators.app}')
