@@ -11,6 +11,7 @@ https://github.com/coddyca/seleniumaws/blob/main/README.md
 
 ```
 sudo yum update
+```
 sudo yum upgrade
 ```
 
@@ -35,7 +36,7 @@ chromedriver --version
 
 ```
 sudo amazon-linux-extras install java-openjdk11 -y
-sudo yum update 
+sudo yum update
 ```
 
 ### Install Jenkins
@@ -88,7 +89,7 @@ sudo yum install gcc openssl-devel bzip2-devel libffi-devel
 ```
 #### install Pyhton 3
 ```
-sudo yum install python3 
+sudo yum install python3
 ```
 
 ### Install Pip
@@ -98,7 +99,7 @@ sudo yum install python3-pip
 
 ### Install virtualenv using pip3
 ```
-sudo pip3 install virtualenv 
+sudo pip3 install virtualenv
 virtualenv --version
 ```
 
@@ -129,11 +130,11 @@ cat /home/ec2-user/.ssh/id_rsa
 
 ### Jenkins Moodle Selenium Script
 
-#### Jenkins Project, Git Branch name (=>important<= */master by default): 
+#### Jenkins Project, Git Branch name (=>important<= */master by default):
 ```
 */main
 ```
-#### Jenkins Project, Shell Script: 
+#### Jenkins Project, Shell Script:
 Setup a proper path, I call my virtualenv dir "venv", and I've got the virtualenv command installed in /usr/local/bin
 ```
 PATH=${PATH}:/usr/local/bin
