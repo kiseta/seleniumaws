@@ -11,7 +11,6 @@ https://github.com/coddyca/seleniumaws/blob/main/README.md
 
 ```
 sudo yum update
-```
 sudo yum upgrade
 ```
 
