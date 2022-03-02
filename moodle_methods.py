@@ -20,7 +20,7 @@ options.add_argument("--disable-dev-shm-usage")
 driver = webdriver.Chrome(options=options)
 
 # global variable to store user moodle system id
-user_system_id = ''
+locators.sid = ''
 
 # Method to open web browser
 def setUp():
@@ -213,10 +213,9 @@ def search_user():
             if driver.find_element(By.XPATH, f'//td[contains(.,"{locators.email}")]'):
                 # capture new user system id
                 href = driver.find_element(By.LINK_TEXT, locators.full_name).get_attribute("href")
-                global user_system_id
-                user_system_id = href[href.find('=') + 1: href.rfind('&')]
-                print(f'--- User: {locators.email}, System ID: {user_system_id} is found --- ')
-                return user_system_id
+                locators.sid = href[href.find('=') + 1: href.rfind('&')]
+                print(f'--- User: {locators.email}, System ID: {locators.sid} is found --- ')
+                return locators.sid
 
             # breakpoint()
 
@@ -259,20 +258,20 @@ def delete_user():
     # f'//a[contains()]'
     # f'//a[contains(@href,"")]'
     # f'//a[contains(@href,"delete=1234")]'
-    #  driver.find_element(By.XPATH, f'//a[contains(@href,"delete={user_system_id}")]')
+    #  driver.find_element(By.XPATH, f'//a[contains(@href,"delete={locators.sid}")]')
     if driver.find_element(By.XPATH, f'//td[contains(.,"{locators.email}")]').is_displayed and \
-            driver.find_element(By.XPATH, f'//a[contains(@href,"delete={user_system_id}")]').is_displayed:
-        # driver.find_element(By.CSS_SELECTOR, f"a[href*='delete={user_system_id}']").is_displayed:
+            driver.find_element(By.XPATH, f'//a[contains(@href,"delete={locators.sid}")]').is_displayed:
+        # driver.find_element(By.CSS_SELECTOR, f"a[href*='delete={locators.sid}']").is_displayed:
 
         # print('--- Delete Link:', driver.find_element(By.CSS_SELECTOR, f"a[href*='delete']").get_attribute("href"))
-        # driver.find_element(By.CSS_SELECTOR, f"a[href*='delete={user_system_id}']").click()
-        driver.find_element(By.XPATH, f'//a[contains(@href,"delete={user_system_id}")]').click()
+        # driver.find_element(By.CSS_SELECTOR, f"a[href*='delete={locators.sid}']").click()
+        driver.find_element(By.XPATH, f'//a[contains(@href,"delete={locators.sid}")]').click()
         sleep(0.25)
         # delete user
         driver.find_element(By.XPATH, "//button[text()='Delete']").click()  # option 1
         # driver.find_element(By.XPATH, "//*[contains(text(), 'Delete')]").click() # option 2 * means any tag
         # driver.find_element(By.XPATH, '//i[@title="Delete"]').click() # option 3# only for i html tag
-        print(f'--- User {locators.email}, System ID {user_system_id} is deleted  at:{datetime.datetime.now()} --- ')
+        print(f'--- User {locators.email}, System ID {locators.sid} is deleted  at:{datetime.datetime.now()} --- ')
         logger('deleted')
     else:
         print(f'--- User {locators.email} not found --- ')
@@ -287,7 +286,7 @@ def logger(action):
     old_instance = sys.stdout
     log_file = open('message.log', 'a')  # open log file and append a record
     sys.stdout = log_file
-    print(f'{user_system_id}\t'
+    print(f'{locators.sid}\t'
           f'{locators.email}\t'
           f'{locators.new_username}\t'
           f'{locators.new_password}\t'

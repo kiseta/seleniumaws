@@ -41,6 +41,7 @@ idnumber  = fake.bothify(text='????-#####', letters='QZXWOAY')
 icq_num = fake.pyint(111111,999999)
 id_aim = last_name.lower() + str(fake.pyint(11,999999))
 id_msn = first_name.lower() + str(fake.pyint(11,99)) + country.lower()
+sid = ''
 
 lst_opt = ['Web page', 'ICQ number', 'Skype ID', 'AIM ID', 'Yahoo ID', 'MSN ID',
            'ID number', 'Institution', 'Department',
