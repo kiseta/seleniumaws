@@ -121,7 +121,7 @@ ssh-keygen
 ```
 cat /home/ec2-user/.ssh/id_rsa.pub
 ```
-#### Add Privat key in Jenkins Project Config, to generate the key:
+#### Add Private key in Jenkins Project Config, to generate the key:
 ```
 cat /home/ec2-user/.ssh/id_rsa
 ```
