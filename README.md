@@ -2,7 +2,7 @@
 
 Open terminal connection to your AWS Linux2 instance, execute the following commands in command line inteface terminal (CMD/Git Bash)
 
-## AWS EC2 Linux2 instance (AWS Academy Temporary Lab Instance)
+## AWS EC2 Linux2 instance (AWS Academy Temporary Sandbox Lab Instance)
 ```
 see commands for a AWS EC2 Ubuntu instance at:
 https://github.com/coddyca/seleniumaws/blob/main/README.md
@@ -11,6 +11,8 @@ https://github.com/coddyca/seleniumaws/blob/main/README.md
 
 ```
 sudo yum update
+```
+```
 sudo yum upgrade
 ```
 
