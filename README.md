@@ -20,6 +20,8 @@ sudo yum upgrade
 
 ```
 curl https://intoli.com/install-google-chrome.sh | bash
+```
+```
 google-chrome --version && which google-chrome
 ```
 
@@ -27,9 +29,17 @@ google-chrome --version && which google-chrome
 
 ```
 cd /tmp/
+```
+```
 wget https://chromedriver.storage.googleapis.com/98.0.4758.102/chromedriver_linux64.zip
+```
+```
 unzip chromedriver_linux64.zip
+```
+```
 sudo mv chromedriver /usr/bin/chromedriver
+```
+```
 chromedriver --version
 ```
 
