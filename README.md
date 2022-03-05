@@ -155,14 +155,14 @@ cat /home/ec2-user/.ssh/id_rsa
 ```
 ---
 
-### Jenkins Moodle Selenium Script
+### Jenkins GitHub Repository Moodle Selenium Script Commands
 
 #### Jenkins Project, Git Branch name (=>important<= */master by default):
 ```
 */main
 ```
-#### Jenkins Project, Shell Script:
-Setup a proper path, I call my virtualenv dir "venv", and I've got the virtualenv command installed in /usr/local/bin
+#### Jenkins (AWS) GitHub Project, Shell Script:
+Setup a proper path, call virtualenv dir "venv", and virtualenv command installed in /usr/local/bin
 ```
 PATH=${PATH}:/usr/local/bin
 if [ ! -d "venv" ]; then
@@ -176,3 +176,16 @@ cd /var/lib/jenkins/workspace/PythonSeleniumMoodle/
 python3 -m unittest discover --pattern=moodle_tests.py
 deactivate
 ```
+
+#### Jenkins (localhost) GitHub Project, Windows batch commands script:
+```
+python -m venv ./venv
+cd venv/Scripts
+call activate.bat
+pip install faker
+pip install selenium
+cd ../..
+python -m unittest discover --pattern=moodle_tests.py
+deactivate
+```
+### Build your project! :joy:
