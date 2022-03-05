@@ -17,6 +17,7 @@ sudo yum upgrade
 ```
 
 ### Install Google Chrome Binary for Linux
+#### Note Google Chrome version.
 
 ```
 curl https://intoli.com/install-google-chrome.sh | bash
@@ -25,7 +26,9 @@ curl https://intoli.com/install-google-chrome.sh | bash
 google-chrome --version && which google-chrome
 ```
 
-### Install ChromeDriver Binary for Linux
+### Install chromedriver Binary for Linux
+#### find the chromedriver version at https://chromedriver.storage.googleapis.com/index.html
+#### replace the version below with your version
 
 ```
 cd /tmp/
