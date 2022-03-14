@@ -165,7 +165,7 @@ cat /home/ec2-user/.ssh/id_rsa
 ```
 */main
 ```
-#### Jenkins (AWS) GitHub Project :octocat:, Shell Script:
+#### Jenkins on AWS EC2 Linux Instance >> GitHub Project :octocat:, Shell Script:
 Setup a proper path, call virtualenv dir "venv", and virtualenv command installed in /usr/local/bin
 ```
 PATH=${PATH}:/usr/local/bin
@@ -181,7 +181,7 @@ python3 -m unittest discover --pattern=moodle_tests.py
 deactivate
 ```
 
-#### Jenkins (localhost) GitHub Project :octocat:, Windows batch commands script:
+#### Jenkins on Localhost >> GitHub Project :octocat:, Windows batch commands script:
 ```
 python -m venv ./venv
 cd venv/Scripts
@@ -192,4 +192,14 @@ cd ../..
 python -m unittest discover --pattern=moodle_tests.py
 deactivate
 ```
+#### Jenkins on Localhost >> Local Python Selenium Project ✔️, Windows batch commands script:
+Navigate to existing project venv\Scripts directory, activate virtual environment, cd to project directory, run the scripts via moodle_tests.py file, deactivate virtual environment at the end
+```
+cd C:\Automation\Python\python_cctb\venv\Scripts
+call activate.bat
+cd C:\Automation\Python\python_cctb\practice\moodle
+python -m unittest discover --pattern=moodle_tests.py
+deactivate
+```
+
 ### Build your project! :rocket: :crossed_fingers: :four_leaf_clover: :thumbsup:
