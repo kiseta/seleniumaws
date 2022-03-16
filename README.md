@@ -159,10 +159,8 @@ cat /home/ec2-user/.ssh/id_rsa
 ---
 
 ### Jenkins GitHub Repository Moodle Selenium Script Commands
-
-#### Jenkins Project (), Git Branch name
 :bulb: name your Jenkins project **PythonSeleniumMoodle**
-
+#### Jenkins Project (), Git Branch name
 :bulb: (=>important<= */master by default):
 ```
 */main
