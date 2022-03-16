@@ -186,6 +186,7 @@ deactivate
 python -m venv ./venv
 cd venv/Scripts
 call activate.bat
+python.exe -m pip install --upgrade pip
 pip install faker
 pip install selenium
 cd ../..
