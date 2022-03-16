@@ -192,6 +192,27 @@ cd ../..
 python -m unittest discover --pattern=moodle_tests.py
 deactivate
 ```
+#### The same as above with comments:
+
+```
+REM comment lines start with REM (Remark) in Windows Batch File
+REM create venv in current directory
+python -m venv ./venv
+REM go to Scripts directory and activate venv
+cd venv/Scripts
+call activate.bat
+REM install additional libraries
+python.exe -m pip install --upgrade pip
+pip install faker
+pip install selenium
+REM go back
+cd ../..
+REM run the script
+python -m unittest discover --pattern=moodle_tests.py
+REM deactivate venv
+deactivate
+```
+
 #### Jenkins on Localhost >> Local Python Selenium Project ✔️, Windows batch commands script:
 Navigate to existing project venv\Scripts directory, activate virtual environment, cd to project directory, run the scripts via moodle_tests.py file, deactivate virtual environment at the end
 ```
