@@ -5,7 +5,7 @@ Open terminal connection to your AWS Linux2 instance, execute the following comm
 ## AWS EC2 Linux2 instance (AWS Academy Temporary Sandbox Lab Instance)
 :bulb: see commands for a **AWS EC2 Ubuntu** instance at:
 
-https://github.com/coddyca/seleniumaws/blob/main/README.md
+https://github.com/coddyca/seleniumaws
 
 ### Initial EC2 Installation on AWS
 
@@ -216,7 +216,7 @@ deactivate
 ```
 
 #### Jenkins on Localhost >> Local Python Selenium Project ✔️, Windows batch commands script:
-Navigate to existing project venv\Scripts directory, activate virtual environment, cd to project directory, run the scripts via moodle_tests.py file, deactivate virtual environment at the end
+Navigate to the existing Python project (i.e. python_cctb) venv\Scripts directory, activate virtual environment, cd to project directory, run the scripts via moodle_tests.py file, deactivate virtual environment at the end
 ```
 cd C:\Automation\Python\python_cctb\venv\Scripts
 call activate.bat
