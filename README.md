@@ -158,8 +158,9 @@ cat /home/ec2-user/.ssh/id_rsa
 ```
 ---
 
-### Jenkins GitHub Repository Moodle Selenium Script Commands
-:bulb: name your Jenkins project **PythonSeleniumMoodle**
+### Jenkins GitHub Repository Selenium Script Commands
+:bulb: the sample code below is given for a Jankins project named: **PythonSeleniumMoodle**
+:bulb: replace **moodle_tests.py** in **python -m unittest discover --pattern=moodle_tests.py** with your tests file name
 #### Jenkins Project (), Git Branch name
 :bulb: (=>important<= */master by default):
 ```
